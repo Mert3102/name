@@ -1,0 +1,21 @@
+meme_dict = {
+            "CRINGE": "Garip ya da utandırıcı bir şey",
+            "LOL": "Komik bir şeye verilen cevap",
+            "ROFL": "bir şakaya karşılık cevap",
+            "SHEESH": "onaylamamak",
+            "AGGRO": "agresifleşmek/sinirlenmek"
+            "CREEPY": "korkunç"
+            "creepy": "korkunç"
+            "cringe": "Garip ya da utandırıcı bir şey",
+            "lol": "Komik bir şeye verilen cevap",
+            "rofl": "bir şakaya karşılık cevap",
+            "sheesh": "onaylamamak",
+            "aggro": "agresifleşmek/sinirlenmek"
+            }
+print("Merhabalar! Bu uygulama, anlamını bilmediğiniz modern kelimelerin anlamını öğrenmenizi sağlayacak (inşallah).")
+while True:
+    word = input("Anlamadığınız bir kelime yazın (hepsini büyük harflerle yazın!): ")
+    if word in meme_dict.keys():
+        print(meme_dict[word])
+    else:
+        print("Böyle bir kelime bulamadım. Yanlış yazılmış olabilir.")
