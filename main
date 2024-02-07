@@ -1,0 +1,34 @@
+import random
+
+
+
+
+rakamlar = "0123456789"
+kucuk_harfler = "abcdefghijklnopqrstuvwxyz"
+buyuk_harfler = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+semboller = "+-/*!&$#?=@"
+while True:
+    sifre=""
+    try:
+
+        uzunluk = int(input("Şifre uzunluğunu giriniz:    "))
+        if ((uzunluk > 0) and (uzunluk < 6)):
+            print("Uyarı! Parolanız birazcık kısa, ancak yine de sonuçlar gösterilecek.")
+        elif uzunluk > 20:
+            print("Uyarı! Parolanız birazcık uzun, ancak yine de sonuçlar gösterilecek.")
+        while uzunluk < 1:
+            uzunluk = int(input("Lütfen sıfırdan büyük bir sayı giriniz!"))
+
+        for i in range(uzunluk):
+            if i % 4 == 0:
+                sifre += random.choice(kucuk_harfler)
+            if i % 4 == 1:
+                sifre += random.choice(buyuk_harfler)
+            if i % 4 == 2:
+                sifre += random.choice(rakamlar)
+            if i % 4 == 3:
+                sifre += random.choice(semboller)
+        print("Parolanız: ", sifre)
+    except:
+        print("Lütfen sadece sayı giriniz!")
+
